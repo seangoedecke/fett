@@ -1,0 +1,22 @@
+{
+  "name": "fett-tracker",
+  "version": "1.0.0",
+  "description": "Tracks running instances of your web app",
+  "main": "./src/fett.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seangoedecke/fett.git"
+  },
+  "author": "seangoedecke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seangoedecke/fett/issues"
+  },
+  "homepage": "https://github.com/seangoedecke/fett#readme"
+}

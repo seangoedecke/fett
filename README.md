@@ -10,6 +10,10 @@ Lots of apps are built as SPAs - designed to be navigated like a native app - bu
 
 You can turn off features of your app as more instances of your app load, or even send the number of instances as a param to the server and have that return a static page instead of a SPA. At the very least, you can display a message to warn the user that they're not using your whiz-bang Babel-transpiled Webpack-bundled Redux app properly.
 
+## installation
+
+Run `npm install fett-tracker` or copy `/src/fett.js`.
+
 ## API
 
 ### `startCounting`
