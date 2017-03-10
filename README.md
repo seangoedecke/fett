@@ -12,7 +12,7 @@ Lots of apps are built as SPAs - designed to be navigated like a native app - bu
 
 You can turn off features of your app as more instances of your app load, or even send the number of instances as a param to the server and have that return a static page instead of a SPA. At the very least, you can display a message to warn the user that they're not using your whiz-bang Babel-transpiled Webpack-bundled Redux app properly.
 
-## installation
+## Installation
 
 Run `npm install fett-tracker` or copy `/src/fett.js`.
 
@@ -26,6 +26,6 @@ Before you can do anything, you have to call `fett.startCounting('myCoolKey')`, 
 
 Once your app is counting its instances, call `fett.numInstances()` to get the number of current instances.
 
-### `createListener` and `removeListener`
+### `addListener` and `removeListener`
 
-To react to instances of your app being created or destroyed, you can create and remove listeners with `fett.createListener(function)` and `fett.removeListener(function)`. The function you pass to `createListener` will be called every time `localStorage` changes.
+To react to instances of your app being created or destroyed, you can add and remove listeners with `fett.addListener(function)` and `fett.removeListener(function)`. The function you pass to `addListener` will be called every time `localStorage` changes.

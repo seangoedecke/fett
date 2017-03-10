@@ -1,7 +1,11 @@
 var storageKey = "_fettNumInstances";
 
 function numInstances() {
-  return window.localStorage[storageKey] === undefined ? 0 : Number(window.localStorage[storageKey])
+  if (window.localStorage[storageKey] === undefined) {
+    return 0
+  } else {
+    return Number(window.localStorage[storageKey])
+  }
 }
 
 function decrementInstance() {
@@ -19,12 +23,13 @@ function incrementInstance() {
 }
 
 function startCounting(key) {
-  if (key) storageKey = key;
+  if (key) {
+    storageKey = key;
+  }
   window.onbeforeunload = decrementInstance;
   window.onload = incrementInstance;
 }
 
-// manually add a listener to localStorage. Useful for on-page-load tracking
 function addListener(listener) {
   window.addEventListener('storage', listener, true)
 }
