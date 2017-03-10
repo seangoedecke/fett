@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Fett demo</title>
+    <script src="../../src/fett.js"></script>
+    <script>
+      startCounting('basicExampleKey')
+      addListener(() => {
+        document.getElementById('counter').innerHTML = numInstances()
+      })
+    </script>
+  </head>
+  <body>
+    <h1>Fett demo</h1>
+    <h3>Open and close other instances of this page and watch the number change</h3>
+    There are <span id='counter'></span> of me!
+  </body>
+</html>
