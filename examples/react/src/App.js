@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import fett from '../../../src/fett';
+import clone from './clone.jpg'
 
 fett.startCounting('coolKey');
 
@@ -9,8 +10,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Fett demo</h1>
-        <h3>Open and close other instances of this page and watch the number change</h3>
+        <div className='header'>
+          <h1>Fett</h1>
+          <p>This is a demo of the npm library <a href='https://www.npmjs.com/package/fett-tracker'>fett-tracker</a> (view the code on <a href='https://github.com/seangoedecke/fett'>Github</a>).
+          <em> Fett</em> tracks how many instances of your web app are running in a browser.</p>
+        </div>
         <Listener>
           <ChangeReporter />
         </Listener>
@@ -50,7 +54,10 @@ class Listener extends Component {
 
 const ChangeReporter = ({ instances }) => (
   <div>
-      There are { instances } of me!
+    <h4>Current number of clones: <em>{ instances }</em>. Open and close other instances of this page and watch the number change!</h4>
+      { [...Array(Number(instances))].map( (n, i) => (
+        <img key={i} src={clone} alt='stormtrooper' />
+      ))}
   </div>
 )
 

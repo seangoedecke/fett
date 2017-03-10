@@ -4,6 +4,8 @@ Fett is a small JS library to track how many versions of your web app are runnin
 
 Named after the greatest clone of all time, Boba Fett, Fett updates `window.localStorage` each time a new instance of your web app is opened in a new tab. It provides utilities to add and remove listeners, so you can react to the creation and removal of instances.
 
+View a working demo of it [here](https://seangoedecke.github.io/fett/).
+
 ## Why Fett?
 
 Lots of apps are built as SPAs - designed to be navigated like a native app - but used more like a static page. If you've ever opened a resource-hungry SPA across ten or fifteen browser tabs, you have felt this pain as well. Integrating Fett into your app will allow users who do this kind of thing to have a smoother experience.
